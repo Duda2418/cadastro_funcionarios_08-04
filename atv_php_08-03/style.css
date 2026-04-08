@@ -1,0 +1,471 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+    background: #e9eaee;
+    color: #3d4b66;
+    min-height: 100vh;
+}
+
+/* NAVBAR */
+.navbar {
+    width: 100%;
+    max-width: 1120px;
+    margin: 35px auto 0;
+    padding: 18px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to bottom, #2f6fc8, #2a5daa);
+    border-radius: 4px 4px 0 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.navbar .logo,
+.navbar .brand {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.navbar .menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    opacity: 0.95;
+}
+
+.navbar a:hover {
+    opacity: 1;
+}
+
+.navbar .active {
+    border-bottom: 3px solid #9ed8ff;
+    padding-bottom: 6px;
+}
+
+/* CONTAINER */
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 20px;
+}
+
+/* CARD LOGIN */
+.card {
+    background: #fff;
+    width: 100%;
+    max-width: 720px;
+    padding: 42px 55px 55px;
+    border-radius: 8px;
+    border: 1px solid #d3d7df;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.card.login-card {
+    max-width: 620px;
+    margin-top: 60px;
+}
+
+h1, h2 {
+    color: #2f5597;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 28px;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+/* ÁREA DE TÍTULO INTERNA */
+.section-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #2f5597;
+    margin-bottom: 14px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #dfe3ea;
+}
+
+/* INPUTS */
+input,
+select,
+textarea {
+    width: 100%;
+    height: 46px;
+    padding: 0 14px;
+    margin-bottom: 16px;
+    border: 1px solid #d7dce5;
+    border-radius: 4px;
+    background: #fff;
+    font-size: 15px;
+    color: #4a5568;
+    outline: none;
+    transition: 0.2s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #4e83d9;
+    box-shadow: 0 0 0 2px rgba(78, 131, 217, 0.12);
+}
+
+input::placeholder {
+    color: #9aa4b2;
+}
+
+/* CAMPOS LADO A LADO */
+.form-row {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 4px;
+}
+
+.form-group {
+    flex: 1;
+}
+
+label {
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+    color: #364760;
+    margin-bottom: 8px;
+}
+
+/* BOTÕES */
+button,
+.btn {
+    min-width: 135px;
+    height: 42px;
+    padding: 0 22px;
+    border: 1px solid #2c63b7;
+    border-radius: 4px;
+    background: linear-gradient(to bottom, #4d88e6, #2f69c0);
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.2);
+    transition: 0.2s ease;
+}
+
+button:hover,
+.btn:hover {
+    background: linear-gradient(to bottom, #5a92ea, #2b61b4);
+}
+
+.btn-secondary {
+    background: linear-gradient(to bottom, #f8f8f8, #e3e6eb);
+    color: #5a6475;
+    border: 1px solid #cfd5de;
+}
+
+.btn-secondary:hover {
+    background: linear-gradient(to bottom, #ffffff, #dde2e8);
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 18px;
+    padding-top: 18px;
+    border-top: 1px solid #e2e6ec;
+}
+
+/* MENSAGEM */
+.msg {
+    text-align: center;
+    margin-bottom: 16px;
+    color: #2f855a;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* LOGIN INPUT ESTILO COM ÍCONE */
+.input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 18px;
+    border: 1px solid #cfd5de;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.input-group span {
+    width: 68px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f7f8fa;
+    border-right: 1px solid #d9dee7;
+    color: #7a8597;
+    font-size: 22px;
+}
+
+.input-group input {
+    border: none;
+    margin-bottom: 0;
+    height: 54px;
+    font-size: 18px;
+    padding: 0 18px;
+}
+
+.login-btn {
+    width: 100%;
+    height: 58px;
+    font-size: 18px;
+    border-radius: 6px;
+    margin-top: 6px;
+}
+
+.forgot-password {
+    display: block;
+    text-align: center;
+    margin-top: 38px;
+    color: #5a6e90;
+    font-size: 16px;
+    text-decoration: underline;
+}
+
+.divider {
+    margin-top: 26px;
+    border: none;
+    border-top: 1px solid #d9dde4;
+}
+
+/* TABLE CONTAINER */
+.table-container {
+    width: 100%;
+    max-width: 1120px;
+    margin: 0 auto 40px;
+    background: #fff;
+    border: 1px solid #d5dae3;
+    border-radius: 0 0 6px 6px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    overflow: hidden;
+}
+
+.page-header {
+    padding: 24px 30px 18px;
+    background: linear-gradient(to bottom, #f9f9fb, #f0f2f6);
+    border-bottom: 1px solid #dfe3ea;
+}
+
+.page-header h2 {
+    margin: 0;
+    text-align: left;
+    font-size: 24px;
+    color: #2f5597;
+}
+
+.content-area {
+    padding: 28px 30px 35px;
+}
+
+.search-box {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.search-box input {
+    margin-bottom: 0;
+    height: 42px;
+}
+
+.search-box .btn {
+    min-width: 120px;
+    height: 42px;
+}
+
+.search-box .btn-new {
+    min-width: 170px;
+}
+
+/* TABELA */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border: 1px solid #d9dee6;
+}
+
+th, td {
+    padding: 14px 12px;
+    border: 1px solid #d9dee6;
+    text-align: left;
+    font-size: 15px;
+}
+
+th {
+    background: linear-gradient(to bottom, #f6f7fa, #eceff4);
+    color: #334b7d;
+    font-weight: 700;
+}
+
+td {
+    color: #4a5568;
+}
+
+tr:nth-child(even) td {
+    background: #fcfcfd;
+}
+
+/* STATUS */
+.status {
+    display: inline-block;
+    padding: 5px 14px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.status.ativo {
+    background: #63b36f;
+}
+
+.status.inativo {
+    background: #8b97aa;
+}
+
+/* AÇÕES */
+.action-buttons {
+    display: flex;
+    gap: 6px;
+}
+
+.action-buttons a,
+.action-buttons button {
+    min-width: 34px;
+    width: 34px;
+    height: 32px;
+    padding: 0;
+    border-radius: 4px;
+    font-size: 14px;
+    border: 1px solid #cfd5de;
+    background: #f8f9fb;
+    color: #3867b4;
+    box-shadow: none;
+}
+
+.action-buttons a.delete,
+.action-buttons button.delete {
+    color: #d9534f;
+}
+
+/* PAGINAÇÃO */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    margin-top: 16px;
+}
+
+.pagination a {
+    padding: 8px 14px;
+    border: 1px solid #cfd5de;
+    background: #fff;
+    color: #4f5d75;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.pagination a.active {
+    background: #2f69c0;
+    color: #fff;
+    border-color: #2f69c0;
+}
+
+/* FORMULÁRIO MAIOR */
+.form-panel {
+    border: 1px solid #dfe3ea;
+    border-radius: 6px;
+    padding: 22px 24px 26px;
+    background: #fff;
+}
+
+.form-panel h3 {
+    color: #2f5597;
+    font-size: 18px;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #dfe3ea;
+}
+
+/* RADIO */
+.radio-group {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-top: 8px;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 0;
+    font-weight: 500;
+}
+
+.radio-group input[type="radio"] {
+    width: auto;
+    height: auto;
+    margin: 0;
+}
+
+/* RESPONSIVO */
+@media (max-width: 900px) {
+    .form-row,
+    .search-box,
+    .actions {
+        flex-direction: column;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .navbar .menu {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .card,
+    .table-container {
+        width: 95%;
+    }
+}
